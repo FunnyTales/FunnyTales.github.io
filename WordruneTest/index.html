@@ -87,6 +87,11 @@
         });
       };
       document.body.appendChild(script);
+
+      function SendMessageFromNative(str) {
+        console.log("JSBridge index.html SendMessageFromNative()");
+        SendMessage('NativeController', 'ReceiveMessageFromNative', UTF8ToString(str));
+      }
     </script>
   </body>
 </html>
