@@ -92,7 +92,7 @@
 
       function SendMessageFromNative(str) {
         console.log("JSBridge index.html SendMessageFromNative()");
-        gameInstance.SendMessage("NativeController", "ReceiveMessageFromNative", UTF8ToString(str));
+        gameInstance.SendMessage("NativeController", "ReceiveMessageFromNative", str);
       }
     </script>
   </body>
