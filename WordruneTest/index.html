@@ -65,6 +65,7 @@
       }
       loadingCover.style.display = "";
 
+	  var gameInstance = null;
       const script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -73,6 +74,7 @@
           progressBarEmpty.style.display = "";
           progressBarFull.style.width = `${100 * progress}%`;
         }).then((unityInstance) => {
+		  gameInstance = unityInstance;
           loadingCover.style.display = "none";
           if (canFullscreen) {
             if (!hideFullScreenButton) {
@@ -90,7 +92,7 @@
 
       function SendMessageFromNative(str) {
         console.log("JSBridge index.html SendMessageFromNative()");
-        SendMessage('NativeController', 'ReceiveMessageFromNative', UTF8ToString(str));
+        gameInstance.SendMessage("NativeController", "ReceiveMessageFromNative", UTF8ToString(str));
       }
     </script>
   </body>
