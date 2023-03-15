@@ -100,11 +100,11 @@
 	    gameInstance.SendMessage("NativeController", "ReceiveMessageFromNative", str);
 	  }
 
-	  function waitForGameInstance(callback, callbackParam) {
+	  function WaitForGameInstance(callback, callbackParam) {
 	    if (gameInstance) {
 		  callback(callbackParam);
 		} else {
-		  setTimeout(waitForGameInstance, 100, callback, callbackParam);
+		  setTimeout(WaitForGameInstance, 100, callback, callbackParam);
 		}
       }
     </script>
