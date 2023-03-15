@@ -95,12 +95,12 @@
         waitForGameInstance(SendMessageToUnity, str);
       }
 
-	  #SendMessageToUnity(str) {
+	  function SendMessageToUnity(str) {
 	    console.log("JSBridge index.html SendMessageToUnity()");
 	    gameInstance.SendMessage("NativeController", "ReceiveMessageFromNative", str);
 	  }
 
-	  #waitForGameInstance(callback, callbackParam) {
+	  function waitForGameInstance(callback, callbackParam) {
 	    if (gameInstance) {
 		  callback(callbackParam);
 		} else {
