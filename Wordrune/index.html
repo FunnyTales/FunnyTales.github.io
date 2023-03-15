@@ -92,7 +92,20 @@
 
       function SendMessageFromNative(str) {
         console.log("JSBridge index.html SendMessageFromNative()");
-        gameInstance.SendMessage("NativeController", "ReceiveMessageFromNative", str);
+        waitForGameInstance(SendMessageToUnity, str);
+      }
+
+	  #SendMessageToUnity(str) {
+	    console.log("JSBridge index.html SendMessageToUnity()");
+	    gameInstance.SendMessage("NativeController", "ReceiveMessageFromNative", str);
+	  }
+
+	  #waitForGameInstance(callback, callbackParam) {
+	    if (gameInstance) {
+		  callback(callbackParam);
+		} else {
+		  setTimeout(waitForGameInstance, 100, callback, callbackParam);
+		}
       }
     </script>
   </body>
