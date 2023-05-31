@@ -22,7 +22,7 @@
 
             </div>
 
-            <div class="selected-cells" alt="Le tue caselle"> 
+            <div class="selected-cells" alt="Le tue caselle" id="selected_cells"> 
                 <div class="title"  alt="Hai selezionato"> <h2>Hai selezionato</h2></div>
                 <img src="right_choice.png" width="140" height="245" alt="selezione corretta" />
                 <img src="selected_not_present.png" width="140" height="245" alt="selezione non presente"/>
@@ -30,9 +30,11 @@
                 <img src="right_choice.png" width="140" height="245" alt="selezionecorretta" />
             </div>
 
-            <button id="verify" type="button" class="btn-verify" alt="Bottone verifica">Verifica</button>
+            <button id="verify" type="button" class="btn-verify" alt="Bottone verifica" onclick = "GFG_Fun()">Verifica</button>
 
         </div>
+
+        <p id = "GFG_DOWN" style = "color:rgb(128, 0, 6); font-size: 20px; font-weight: bold;"></p>
 
         <div class="previous_attempts">
             <div class="title"  alt="Tentativi precedenti"> <h2>Tentativi</h2></div>
@@ -45,3 +47,26 @@
 
     </div>
 </div>
+
+
+<script>
+    //paragraph
+    const para = document.createElement("p");
+    para.style = "color:rgb(128, 0, 6); font-size: 20;";
+    const node = document.createTextNode("New text added by js");
+    para.appendChild(node);
+    
+    const element = document.getElementById("attempts");
+    element.appendChild(para);
+    //img
+    var down = document.getElementById('GFG_DOWN');
+        
+    function GFG_Fun() {
+        var img = document.createElement('img');
+        img.src = "added_img.png";
+        img.alt = "immagine da js";
+        document.getElementById('selected_cells').appendChild(img);
+        down.innerHTML = "Image Element Added.";
+    }
+    
+</script>
