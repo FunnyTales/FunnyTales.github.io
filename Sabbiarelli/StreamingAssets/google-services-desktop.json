@@ -1,0 +1,37 @@
+{
+  "client": [
+    {
+      "services": {
+        "appinvite_service": {
+          "status": 1
+        }, 
+        "analytics_service": {
+          "status": 0
+        }
+      }, 
+      "oauth_client": [
+        {
+          "client_id": "229591110135-j7jejtn777rmki35a1vnainsqqfrc486.apps.googleusercontent.com"
+        }
+      ], 
+      "api_key": [
+        {
+          "current_key": "AIzaSyABHV1kXkML5j7GQAEGd0uEkduGrB-Nqjs"
+        }
+      ], 
+      "client_info": {
+        "mobilesdk_app_id": "1:229591110135:ios:cbae7a863a102ebd", 
+        "android_client_info": {
+          "package_name": "it.sabbiarelli.sabbiarelli3"
+        }
+      }
+    }
+  ], 
+  "configuration_version": "1", 
+  "project_info": {
+    "storage_bucket": "sabbiarelli-app-b3dfc.appspot.com", 
+    "project_id": "sabbiarelli-app-b3dfc", 
+    "firebase_url": "https://sabbiarelli-app-b3dfc.firebaseio.com", 
+    "project_number": "229591110135"
+  }
+}
