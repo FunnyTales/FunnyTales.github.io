@@ -7,7 +7,7 @@
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <canvas id="unity-canvas" width=1200 height=720 tabindex="-1" style="width: 1200px; height: 720px; background: #231F20"></canvas>
-    <script src="Build/WebGLVideo.loader.js"></script>
+    <script src="Build/Sabbiarelli-WebGL.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -25,9 +25,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "https://media.githubusercontent.com/media/FunnyTales/FunnyTales.github.io/master/Sabbiarelli/Build/WebGLVideo.data",
-        frameworkUrl: "Build/WebGLVideo.framework.js",
-        codeUrl: "Build/WebGLVideo.wasm",
+        dataUrl: "https://media.githubusercontent.com/media/FunnyTales/FunnyTales.github.io/master/Sabbiarelli/Build/Sabbiarelli-WebGL.data",
+        frameworkUrl: "Build/Sabbiarelli-WebGL.framework.js",
+        codeUrl: "Build/Sabbiarelli-WebGL.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Sabbiarelli",
         productName: "Sabbiarelli",
